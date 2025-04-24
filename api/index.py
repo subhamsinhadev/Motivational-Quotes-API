@@ -2,7 +2,13 @@ from flask import Flask ,jsonify
 import socket
 import random;
 import json
-
+import requests 
+# Inside api/quotes.py
+def handler(request):
+    return {
+        "statusCode": 200,
+        "body": "Stay positive and keep going!"
+    }
 app=Flask(__name__)
 # Loading json
 with open('quotes.json','r')as f:
